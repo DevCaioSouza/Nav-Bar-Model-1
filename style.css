@@ -1,0 +1,152 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #f6f6f6;
+  font-family: 'Lora', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background: goldenrod;
+  height: 66px;
+}
+
+header * {
+  color: white;
+}
+
+header .icon-text span{
+  color: black;
+}
+
+header .icon {
+  float: left;
+  height: inherit;
+  margin-left: 2em;
+}
+
+header .icon-text {
+  font-family: "Candal", serif;
+  font-size: 1.8em;
+  margin: 9px;
+}
+
+header ul {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  position: relative;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 66px;
+  right: 0px;
+  width: 180px;
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+header ul li ul li{
+  width: 100%;
+}
+
+header ul li ul li a{
+  padding: 10px;
+  color: #444;
+  background: white;
+}
+
+header ul li a{
+  display: block;
+  padding: 21px;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+header ul li a:hover{
+  background: gray;
+  transition: 0.5s;
+}
+
+header ul li ul li a.logout{
+  color: red;
+}
+
+header i.menu-toggle {
+  display: none;
+}
+
+
+/* ----- Media Queries ----- */
+
+@media (max-width: 760px) {
+    header {
+      position: relative;
+    }
+
+    header ul {
+    color: goldenrod;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    background: rgb(26, 68, 204);
+    
+    }
+
+    .showing {
+      max-height: 100em;
+    }
+
+    
+    header ul li {
+      width: 100%;
+    }
+
+    header ul li ul{
+      
+      position: static;
+      display: block;
+      width: 100%;
+    }
+
+    header ul li ul li a{
+      padding: 10px;
+      color: white;
+      background: orange;
+      padding-left: 50px;
+    }
+
+    header ul li ul li a:hover{
+      background: gray;
+    }
+
+    header ul li ul li a.logout{
+      color: red;
+    }
+
+    header i.menu-toggle{
+      position: absolute;
+      display: block;
+      right: 20px;
+      top: 20px;
+      font-size: 1.9em;
+      color: black;
+    }
+
+  header .icon{
+    margin-left: .5em;
+  }
+
+}
